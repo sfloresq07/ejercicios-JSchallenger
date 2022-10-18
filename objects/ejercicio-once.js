@@ -1,8 +1,10 @@
-// Write a function that takes an object as argument
-// It should return an object with all original object properties
-// except for the property with key 'b'
-function myFunction(obj) {
-    const { b, ...rest } = obj;
-  return rest;
+// Write a function that takes an object (a) as argument
+// Return the sum of all object values
+function myFunction(a) {
+    
+  return Object.values(a).reduce((next, values) => {
+    return next + values;
+  }, 0); 
 }
-console.log(myFunction({ a: 1, b: 7, c: 3 }));
+
+console.log(myFunction({w:15,x:22,y:13}));

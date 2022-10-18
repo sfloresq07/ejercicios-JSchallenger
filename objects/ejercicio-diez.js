@@ -1,8 +1,11 @@
-// Write a function that takes an object (a) as argument
-// Return the sum of all object values
-
-function myFunction(a) {
-  return Object.values(a).reduce((a, b) => a + b);
+// Write a function that takes an object as argument
+// In some cases the object contains other objects with some deeply nested properties
+// Return the property 'b' of object 'a' inside the original object if it exists
+// If not, return undefined
+function myFunction(obj) {
+  for (prop in obj) {
+ 
+    return (obj[prop].b);
+  }
 }
-
-console.log(myFunction({w:15,x:22,y:13}));
+console.log(myFunction({a:1}))
